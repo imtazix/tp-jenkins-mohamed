@@ -1,10 +1,6 @@
 pipeline {
-    agent {
-        docker {
-            image 'ilyes94/maven-docker-java17'
-            args '-v /root/.m2:/root/.m2 -v /var/run/docker.sock:/var/run/docker.sock'  
-        }
-    }
+    agent any
+
 
     triggers {
         cron 'H/30 * * * *'  
